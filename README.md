@@ -4,7 +4,7 @@ Container has all necessary components to run application. In prod we just need 
 
 Main idea is reproducibility (if it runs on my system then should run on others system also)
 
-Use docker becuase of portability,scalability, no worry about compatibility issues or hardware requirements.
+Use docker becuase of isloation,portability,scalability, no worry about compatibility issues or hardware requirements.
 
 Containers can be deployed on any OS, cloud etc. It is OS level virtualization.
 Virtual machines each have thein own OS (more isolated), containers share the OS and resources.
@@ -43,3 +43,14 @@ pushing image to docker hub
 2) create image
 3) push to docker hub
 4) anyone can now pull that image and run container
+
+--------------------
+
+Dockerfile components
+
+FROM (base image (linux/ubuntu/python/node etc etc))
+COPY (copy folders(codebase) from local system to user root folder ke andar ke folders)
+EXPOSE (exposing the newwork port folder)
+WORKDIR (working directory in the container (from where you want the app to run and stuff (os.cwd() in local)))
+RUN (pip install and stuff whatever we want to run)
+CMD (final command to run the app and stuff)
